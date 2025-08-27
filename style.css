@@ -1,4 +1,6 @@
-/* Reset */
+/* ==============================
+   RESET & BASE
+============================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,13 +10,29 @@
 body {
   font-family: "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
+  background-color: #f9f9f9;
   color: #333;
-  background: #f9f9f9;
 }
 
-/* Header */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ==============================
+   HEADER
+============================== */
 .main-header {
-  background: #111;
+  background-color: #111;
   color: #fff;
   padding: 1rem 0;
   position: sticky;
@@ -23,9 +41,6 @@ body {
 }
 
 .main-header .container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -34,10 +49,9 @@ body {
 .brand {
   display: flex;
   align-items: center;
-  text-decoration: none;
-  color: #fff;
   font-weight: bold;
   font-size: 1.2rem;
+  color: #fff;
 }
 
 .brand img.logo {
@@ -47,8 +61,8 @@ body {
 
 .main-nav a {
   color: #fff;
-  text-decoration: none;
   margin-left: 20px;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
@@ -57,16 +71,14 @@ body {
   color: #00c3ff;
 }
 
-/* Hero */
+/* ==============================
+   HERO
+============================== */
 .hero {
   background: linear-gradient(to right, #00c3ff, #0062ff);
-  color: white;
+  color: #fff;
   text-align: center;
   padding: 6rem 1rem;
-}
-
-.hero.small-hero {
-  padding: 3rem 1rem;
 }
 
 .hero h1 {
@@ -84,7 +96,6 @@ body {
   color: #0062ff;
   padding: 0.8rem 1.5rem;
   border-radius: 50px;
-  text-decoration: none;
   font-weight: bold;
   transition: all 0.3s;
 }
@@ -94,13 +105,9 @@ body {
   color: #fff;
 }
 
-/* Features */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
+/* ==============================
+   FEATURES / SERVICES
+============================== */
 .features {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -113,14 +120,6 @@ body {
   font-size: 2.5rem;
   color: #0062ff;
   margin-bottom: 1rem;
-}
-
-/* Services grid */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  margin: 4rem 0;
 }
 
 .service-card {
@@ -136,54 +135,75 @@ body {
   transform: translateY(-5px);
 }
 
-.service-card i {
-  font-size: 2.5rem;
+/* ==============================
+   ABOUT PAGE
+============================== */
+.about ul {
+  margin-top: 1rem;
+}
+
+.about ul li {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.about ul i {
   color: #00c3ff;
-  margin-bottom: 1rem;
+  margin-right: 8px;
 }
 
-/* About grid */
-.about {
-  margin: 4rem 0;
-  text-align: center;
-}
-
-.about-grid {
-  margin-top: 3rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.about-grid div {
+/* ==============================
+   CONTACT FORM
+============================== */
+.contact-form {
   background: #fff;
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  max-width: 600px;
+  margin: 2rem auto 4rem auto;
 }
 
-.about-grid i {
-  font-size: 2rem;
-  color: #0062ff;
-  margin-bottom: 1rem;
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
 }
 
-/* CTA */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* ==============================
+   CTA
+============================== */
 .cta {
-  background: #0062ff;
+  background-color: #0062ff;
   color: #fff;
   text-align: center;
   padding: 3rem 1rem;
-  margin: 4rem 0 0 0;
 }
 
 .cta h2 {
   margin-bottom: 1.5rem;
 }
 
-/* Footer */
+/* ==============================
+   FOOTER
+============================== */
 .main-footer {
-  background: #111;
+  background-color: #111;
   color: #bbb;
   padding: 2rem 0;
 }
@@ -202,23 +222,35 @@ body {
 
 .footer-links a {
   color: #bbb;
-  text-decoration: none;
   margin-left: 20px;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
   color: #00c3ff;
 }
 
-/* Responsive */
+/* ==============================
+   RESPONSIVE
+============================== */
 @media(max-width: 768px) {
   .main-header .container {
     flex-direction: column;
   }
+
   .main-nav {
     margin-top: 10px;
   }
+
   .footer-links {
     margin-top: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
   }
 }
