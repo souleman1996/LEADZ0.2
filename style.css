@@ -1,6 +1,4 @@
-/* ==============================
-   RESET & BASE
-============================== */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -8,211 +6,128 @@
 }
 
 body {
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  background-color: #f9f9f9;
   color: #333;
 }
 
 a {
   text-decoration: none;
-}
-
-ul {
-  list-style: none;
+  color: inherit;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
+  max-width: 1100px;
+  margin: auto;
 }
 
-/* ==============================
-   HEADER
-============================== */
+/* Header */
 .main-header {
-  background-color: #111;
+  background: #222;
   color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
+  padding: 15px 0;
 }
 
-.main-header .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
+.main-header .brand {
   display: flex;
   align-items: center;
+  font-size: 1.3rem;
   font-weight: bold;
-  font-size: 1.2rem;
   color: #fff;
 }
 
-.brand img.logo {
+.main-header .brand img.logo {
   height: 40px;
   margin-right: 10px;
 }
 
+.main-nav {
+  float: right;
+}
+
 .main-nav a {
   color: #fff;
-  margin-left: 20px;
-  font-weight: 600;
-  transition: color 0.3s;
+  margin: 0 15px;
+  font-weight: 500;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: #00c3ff;
+.main-nav a.active,
+.main-nav a:hover {
+  color: #f39c12;
 }
 
-/* ==============================
-   HERO
-============================== */
+/* Hero */
 .hero {
-  background: linear-gradient(to right, #00c3ff, #0062ff);
-  color: #fff;
+  background: #f4f4f4;
   text-align: center;
-  padding: 6rem 1rem;
+  padding: 80px 20px;
 }
 
 .hero h1 {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 10px;
 }
 
 .hero p {
+  margin-bottom: 20px;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
 }
 
 .btn-primary {
-  background: #fff;
-  color: #0062ff;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: all 0.3s;
+  background: #f39c12;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 4px;
 }
 
 .btn-primary:hover {
-  background: #00c3ff;
-  color: #fff;
+  background: #d35400;
 }
 
-/* ==============================
-   FEATURES / SERVICES
-============================== */
+/* Features */
 .features {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
   text-align: center;
+}
+
+.features div {
+  flex: 1;
+  margin: 0 10px;
 }
 
 .features i {
   font-size: 2.5rem;
-  color: #0062ff;
-  margin-bottom: 1rem;
+  color: #f39c12;
+  margin-bottom: 10px;
 }
 
-.service-card {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  text-align: center;
-  transition: transform 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-5px);
-}
-
-/* ==============================
-   ABOUT PAGE
-============================== */
-.about ul {
-  margin-top: 1rem;
-}
-
-.about ul li {
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.about ul i {
-  color: #00c3ff;
-  margin-right: 8px;
-}
-
-/* ==============================
-   CONTACT FORM
-============================== */
-.contact-form {
-  background: #fff;
-  padding: 2rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-  max-width: 600px;
-  margin: 2rem auto 4rem auto;
-}
-
-.contact-form label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 0.8rem;
-  margin-bottom: 1.2rem;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  display: inline-block;
-  cursor: pointer;
-}
-
-/* ==============================
-   CTA
-============================== */
+/* CTA */
 .cta {
-  background-color: #0062ff;
+  background: #222;
   color: #fff;
   text-align: center;
-  padding: 3rem 1rem;
+  padding: 50px 20px;
 }
 
 .cta h2 {
-  margin-bottom: 1.5rem;
+  margin-bottom: 15px;
 }
 
-/* ==============================
-   FOOTER
-============================== */
+/* Footer */
 .main-footer {
-  background-color: #111;
-  color: #bbb;
-  padding: 2rem 0;
+  background: #111;
+  color: #aaa;
+  padding: 30px 0;
+  margin-top: 40px;
 }
 
-.main-footer .container {
+.footer-brand {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
   align-items: center;
+  flex-direction: column;
 }
 
 .footer-brand img {
@@ -220,37 +135,27 @@ ul {
   margin-bottom: 10px;
 }
 
+.footer-links {
+  margin-top: 10px;
+}
+
 .footer-links a {
-  color: #bbb;
-  margin-left: 20px;
-  transition: color 0.3s;
+  color: #aaa;
+  margin: 0 10px;
 }
 
 .footer-links a:hover {
-  color: #00c3ff;
+  color: #f39c12;
 }
 
-/* ==============================
-   RESPONSIVE
-============================== */
-@media(max-width: 768px) {
-  .main-header .container {
+/* Responsive */
+@media (max-width: 768px) {
+  .features {
     flex-direction: column;
   }
 
   .main-nav {
+    float: none;
     margin-top: 10px;
-  }
-
-  .footer-links {
-    margin-top: 15px;
-  }
-
-  .hero h1 {
-    font-size: 2rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
   }
 }
