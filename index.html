@@ -1,181 +1,79 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leadz – Hjem</title>
-  <meta name="description" content="UGC-drevet annonseringsmodell som fyller lommeboken til nettbutikker og lokale bedrifter.">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root{
-      --bg:#f9fafb; --card:#fff; --text:#1e293b; --muted:#64748b; --brand:#79eebd; --brand-dark:#10b981; --shadow:0 10px 20px rgba(0,0,0,.08); --radius-2xl:1.25rem;
-    }
-    [data-theme="dark"]{
-      --bg:#0f172a; --card:#1e293b; --text:#f1f5f9; --muted:#94a3b8; --shadow:0 10px 20px rgba(0,0,0,.4);
-    }
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:background .3s,color .3s}
-    .container{width:min(1120px,92%);margin-inline:auto}
-    header{position:sticky;top:0;background:var(--card);box-shadow:0 1px 4px rgba(0,0,0,.06);z-index:50;transition:background .3s}
-    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0;flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:.75rem;text-decoration:none;color:var(--text);font-weight:700}
-    .brand img{height:42px;width:auto}
-    nav{display:flex;align-items:center;gap:.5rem}
-    nav a{color:var(--muted);text-decoration:none;font-weight:600;transition:color .3s ease}
-    nav a:hover{color:var(--brand-dark)}
-    .btn{padding:.8rem 1.2rem;border:none;border-radius:999px;font-weight:700;cursor:pointer;transition:background .3s,color .3s}
-    .btn-primary{background:var(--brand);color:#fff;box-shadow:var(--shadow)}
-    .btn-primary:hover{background:var(--brand-dark)}
-    .btn-outline{background:transparent;border:2px solid var(--brand);color:var(--brand)}
-    .btn-outline:hover{background:var(--brand);color:#fff}
-    .hero{padding:4rem 1rem 2rem}
-    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
-    h1{font-size:clamp(1.8rem,5vw,3rem);margin:0 0 1rem;font-weight:800}
-    .lead{font-size:clamp(1rem,2.5vw,1.2rem);color:var(--muted);max-width:60ch}
-    .hero-card{background:var(--card);padding:1.5rem;border-radius:var(--radius-2xl);box-shadow:var(--shadow);transition:background .3s,color .3s}
-    section{padding:3rem 1rem}
-    h2{font-size:clamp(1.6rem,4vw,2rem);margin:0 0 1rem;font-weight:700}
-    .muted{color:var(--muted)}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
-    .card{background:var(--card);border-radius:var(--radius-2xl);padding:1.5rem;box-shadow:var(--shadow);transition:background .3s,color .3s}
-    .form{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
-    .form .full{grid-column:1/-1}
-    label{display:block;font-weight:600;margin-bottom:.35rem}
-    input,textarea,select{width:100%;padding:.9rem;border-radius:.8rem;border:1px solid #cbd5e1;background:#fff;color:var(--text)}
-    textarea{min-height:120px}
-    footer{padding:2.5rem 1rem;background:var(--card);border-top:1px solid #e2e8f0;margin-top:3rem;transition:background .3s}
-    .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:1.5rem}
-    .copy{color:var(--muted);font-size:.95rem}
-    [data-animate]{opacity:0;transform:translateY(30px);transition:opacity .8s ease, transform .8s ease}
-    [data-animate].visible{opacity:1;transform:translateY(0)}
-    @media(max-width:960px){
-      .hero-grid{grid-template-columns:1fr;gap:1.5rem}
-      .grid-3{grid-template-columns:1fr;gap:1rem}
-      .form{grid-template-columns:1fr}
-      .hero{padding:3rem 1rem 2rem}
-      nav{flex-direction:column;align-items:flex-start;gap:.5rem;display:none;width:100%}
-      nav.active{display:flex}
-      .menu-toggle{display:block;background:var(--brand);color:#fff;border:none;padding:.6rem 1rem;border-radius:.5rem;cursor:pointer;font-weight:700}
-    }
-    @media(min-width:961px){.menu-toggle{display:none}}
-    /* Bilder */
-    .image-card img{width:100%;border-radius:var(--radius-2xl);margin-top:1rem}
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LeadZUGC - Hjem</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- HEADER -->
-  <header>
-    <div class="container nav">
+  <header class="main-header">
+    <div class="container">
       <a href="index.html" class="brand">
-        <img src="./images/leadzugc.png" alt="Leadz Media logo">
+        <img src="./images/leadzugc.png" alt="LeadZUGC Logo" class="logo"> LeadZUGC
       </a>
-      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-      <nav id="navMenu">
-        <a href="index.html">Hjem</a>
+      <nav class="main-nav">
+        <a href="index.html" class="active">Hjem</a>
         <a href="about.html">Om oss</a>
         <a href="services.html">Tjenester</a>
-        <a href="blog.html">Blogg</a>
         <a href="contact.html">Kontakt</a>
-        <button class="btn btn-outline" onclick="toggleTheme()">🌓</button>
       </nav>
     </div>
   </header>
 
   <!-- HERO -->
-  <main id="top">
-    <section class="hero container" data-animate>
-      <div class="hero-grid">
-        <div>
-          <h1>UGC-drevet annonseringsmodell</h1>
-          <p class="lead">Vi hjelper bedrifter med autentisk innhold som engasjerer og konverterer. Over <b>500+ selskaper</b> i Skandinavia stoler på oss.</p>
-          <div style="margin-top:1.5rem">
-            <a href="contact.html" class="btn btn-primary">Få modellen i dag</a>
-          </div>
-        </div>
-        <div class="hero-card" data-animate>
-          <b>Hvorfor UGC?</b>
-          <p class="muted">Brukergenerert innhold gir troverdighet og tillit.</p>
-          <ul class="muted" style="margin:0 0 0 1rem">
-            <li>Autentiske stemmer</li>
-            <li>Høyere engasjement</li>
-            <li>Salgsdrevet annonsering</li>
-          </ul>
-          <div class="image-card">
-            <img src="./image/ugc-example.jpg" alt="Eksempel UGC">
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="hero">
+    <div class="container">
+      <h1>Velkommen til LeadZUGC</h1>
+      <p>Vi hjelper deg med innovative løsninger som gir resultater.</p>
+      <a href="services.html" class="btn-primary">Se våre tjenester</a>
+    </div>
+  </section>
 
-    <!-- UGC-MODELLEN -->
-    <section id="modellen" class="container" data-animate>
-      <h2>UGC-modellen i korte trekk</h2>
-      <div class="grid-3" style="margin-top:1rem">
-        <div class="card" data-animate>
-          <h3>Autentisitet</h3>
-          <p class="muted">Innhold fra virkelige brukere bygger tillit raskere enn tradisjonelle annonser.</p>
-          <div class="image-card"><img src="./image/authenticity.jpg" alt="Autentisitet"></div>
-        </div>
-        <div class="card" data-animate>
-          <h3>Engasjement</h3>
-          <p class="muted">UGC gir høyere delingsrate og bedre tilknytning til målgruppen.</p>
-          <div class="image-card"><img src="./image/engagement.jpg" alt="Engasjement"></div>
-        </div>
-        <div class="card" data-animate>
-          <h3>Konvertering</h3>
-          <p class="muted">Vi skaper UGC-kampanjer som ikke bare blir sett – men som selger.</p>
-          <div class="image-card"><img src="./image/conversion.jpg" alt="Konvertering"></div>
-        </div>
+  <!-- FEATURES -->
+  <section class="container">
+    <div class="features">
+      <div>
+        <i class="fas fa-lightbulb"></i>
+        <h3>Innovasjon</h3>
+        <p>Vi leverer fremtidsrettede løsninger skreddersydd dine behov.</p>
       </div>
-    </section>
+      <div>
+        <i class="fas fa-bolt"></i>
+        <h3>Effektivitet</h3>
+        <p>Optimaliser virksomheten din med våre tjenester.</p>
+      </div>
+      <div>
+        <i class="fas fa-users"></i>
+        <h3>Samarbeid</h3>
+        <p>Vi bygger langsiktige partnerskap med kundene våre.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- KUNDER -->
-    <section id="kunder" class="container" data-animate>
-      <h2>Våre kunder</h2>
-      <div class="grid-3" style="margin-top:1rem">
-        <div class="card" data-animate"><img src="./image/client1.jpg" alt="Kunde 1"></div>
-        <div class="card" data-animate"><img src="./image/client2.jpg" alt="Kunde 2"></div>
-        <div class="card" data-animate"><img src="./image/client3.jpg" alt="Kunde 3"></div>
-      </div>
-    </section>
-  </main>
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Klar til å starte reisen?</h2>
+    <a href="contact.html" class="btn-primary">Kontakt oss</a>
+  </section>
 
   <!-- FOOTER -->
-  <footer data-animate>
-    <div class="container footer-grid">
-      <div>
-        <div class="brand" style="margin-bottom:.5rem"><img src="./image/leadzugc.png" alt="Leadz Media logo"></div>
-        <p class="copy">© 2025 Leadzno | Alle rettigheter forbeholdt.</p>
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="./images/leadzugc.png" alt="LeadZUGC Logo">
+        <p>&copy; 2025 LeadZUGC. Alle rettigheter forbeholdt.</p>
       </div>
-      <div>
-        <h4>Aker Valley AS</h4>
-        <p class="copy">Tjuvholmen allé 4<br>0252 Oslo, Norway</p>
-      </div>
-      <div>
-        <h4>Kontakt</h4>
-        <p class="copy">
-          <a href="tel:+4741296593">+47 412 96 593</a><br>
-          <a href="mailto:info@leadzmedia.no">info@leadzmedia.no</a>
-        </p>
+      <div class="footer-links">
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="services.html">Tjenester</a>
+        <a href="contact.html">Kontakt</a>
       </div>
     </div>
   </footer>
-
-  <!-- SCRIPT -->
-  <script>
-    // Scroll animations
-    const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target);}})},{threshold:.2});
-    document.querySelectorAll('[data-animate]').forEach(el=>observer.observe(el));
-
-    // Dark mode
-    function applyTheme(theme){if(theme==="dark"){document.body.setAttribute("data-theme","dark");}else{document.body.removeAttribute("data-theme");}localStorage.setItem("theme",theme);}
-    function toggleTheme(){const current=document.body.getAttribute("data-theme")==="dark"?"dark":"light";applyTheme(current==="dark"?"light":"dark");}
-    const savedTheme=localStorage.getItem("theme"); if(savedTheme){applyTheme(savedTheme);}
-
-    // Mobile menu
-    function toggleMenu(){document.getElementById('navMenu').classList.toggle('active');}
-    document.querySelectorAll("#navMenu a").forEach(link=>{link.addEventListener("click",()=>document.getElementById('navMenu').classList.remove('active'));});
-  </script>
 </body>
 </html>
-
