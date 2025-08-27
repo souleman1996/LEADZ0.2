@@ -1,109 +1,79 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Leadzmedia – Hjem</title>
-
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-<!-- Egen CSS -->
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leadz – Hjem</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
-<header>
-  <div class="container nav">
-    <a href="index.html" class="brand"><img src="./images/leadzugc.png" alt="Leadz logo"></a>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav id="navMenu">
-      <a href="index.html">Hjem</a>
-      <a href="about.html">Om oss</a>
-      <a href="services.html">Tjenester</a>
-      <a href="blog.html">Blogg</a>
-      <a href="contact.html">Kontakt</a>
-      <button class="btn btn-outline" onclick="toggleTheme()">🌓</button>
-    </nav>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <h1>Skap ekte engasjement med UGC</h1>
-    <p>Vi hjelper bedrifter å vokse med autentisk innhold som engasjerer og konverterer.</p>
-    <a href="contact.html" class="btn btn-primary">Kom i gang</a>
-  </section>
-
-  <!-- Våre styrker -->
-  <section class="container features">
-    <h2>Våre styrker</h2>
-    <div class="grid-3">
-      <div class="card">
-        <i class="fas fa-users"></i>
-        <h3>Team</h3>
-        <p>Eksperter innen digital markedsføring og UGC-strategi.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-bullseye"></i>
-        <h3>Fokus</h3>
-        <p>Autentisk markedsføring med målbare resultater.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-lightbulb"></i>
-        <h3>Innovasjon</h3>
-        <p>Alltid nye ideer som engasjerer publikum.</p>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="container">
       <a href="index.html" class="brand">
-        <img src="./image/leadzugc.png" alt="Leadz Logo">
+        <img src="./images/leadzugc.png" alt="Leadz logo" class="logo">
         <span>Leadz</span>
       </a>
-      <p>Leadz media hjelper bedrifter å vokse med autentisk innhold som engasjerer og konverterer. Vi gjør markedsføring enklere og mer effektiv.</p>
+      <nav class="main-nav">
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="services.html">Tjenester</a>
+        <a href="contact.html">Kontakt</a>
+      </nav>
     </div>
-    <div>
-      <h4>Kontakt</h4>
-      <p><i class="fas fa-map-marker-alt"></i> Tjuvholmen allé 4, 0252 Oslo</p>
-      <p><i class="fas fa-phone"></i> +47 412 96 593</p>
-      <p><i class="fas fa-envelope"></i> info@leadzmedia.no</p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Velkommen til Leadz</h1>
+      <p>Vi hjelper deg med å vokse gjennom ekte og effektiv markedsføring.</p>
+      <a href="services.html" class="btn-primary">Utforsk våre tjenester</a>
     </div>
-    <div>
-      <h4>Følg oss</h4>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-twitter"></i></a>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features container">
+    <div class="feature">
+      <i class="fa-solid fa-users"></i>
+      <h3>Autentisk markedsføring</h3>
+      <p>Bygg tillit med brukergenerert innhold (UGC) og ekte historier.</p>
+    </div>
+    <div class="feature">
+      <i class="fa-solid fa-bullhorn"></i>
+      <h3>Smarte kampanjer</h3>
+      <p>Vi skreddersyr løsninger som engasjerer og gir resultater.</p>
+    </div>
+    <div class="feature">
+      <i class="fa-solid fa-chart-line"></i>
+      <h3>Resultatdrevet</h3>
+      <p>Data og innsikt sikrer at du når dine mål.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <h2>Klar til å ta din markedsføring til neste nivå?</h2>
+    <a href="contact.html" class="btn-primary">Kontakt oss</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-brand">
+        <img src="./images/leadzugc.png" alt="Leadz logo">
+        <p>© 2025 Leadz.no | Alle rettigheter forbeholdt.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html">Hjem</a>
+        <a href="about.html">Om oss</a>
+        <a href="services.html">Tjenester</a>
+        <a href="contact.html">Kontakt</a>
       </div>
     </div>
-  </div>
-  <div class="copy">© 2025 Leadzno | Alle rettigheter forbeholdt.</div>
-</footer>
-
-<script>
-function toggleMenu() {
-  const nav = document.getElementById('navMenu');
-  nav.classList.toggle('active');
-}
-
-function toggleTheme() {
-  if(document.documentElement.getAttribute('data-theme') === 'dark'){
-    document.documentElement.setAttribute('data-theme','');
-  } else {
-    document.documentElement.setAttribute('data-theme','dark');
-  }
-}
-</script>
+  </footer>
 
 </body>
 </html>
