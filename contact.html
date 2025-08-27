@@ -3,18 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Leadz – Kontakt</title>
+  <title>Kontakt - LeadZUGC</title>
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="js/script.js" defer></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
-  <!-- HEADER -->
   <header class="main-header">
     <div class="container">
       <a href="index.html" class="brand">
-        <img src="images/leadzugc.png" alt="Leadz logo" class="logo">
-        <span>Leadz</span>
+        <img src="./images/leadzugc.png" alt="LeadZUGC Logo" class="logo"> LeadZUGC
       </a>
       <nav class="main-nav">
         <a href="index.html">Hjem</a>
@@ -25,34 +23,21 @@
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
+  <section class="container contact">
     <h1>Kontakt oss</h1>
-    <p>Vi hører gjerne fra deg! Send oss en melding, så tar vi kontakt.</p>
-  </section>
-
-  <!-- CONTACT FORM -->
-  <section class="container">
-    <form class="contact-form">
-      <label for="name">Navn</label>
-      <input type="text" id="name" name="name" placeholder="Ditt navn" required>
-
-      <label for="email">E-post</label>
-      <input type="email" id="email" name="email" placeholder="din@epost.no" required>
-
-      <label for="message">Melding</label>
-      <textarea id="message" name="message" rows="5" placeholder="Skriv meldingen her..." required></textarea>
-
-      <button type="submit" class="btn-primary">Send melding</button>
+    <form>
+      <input type="text" placeholder="Ditt navn" required>
+      <input type="email" placeholder="Din e-post" required>
+      <textarea placeholder="Din melding" required></textarea>
+      <button type="submit" class="btn-primary">Send</button>
     </form>
   </section>
 
-  <!-- FOOTER -->
   <footer class="main-footer">
     <div class="container">
       <div class="footer-brand">
-        <img src="images/leadzugc.png" alt="Leadz logo">
-        <p>© 2025 Leadz. Alle rettigheter forbeholdt.</p>
+        <img src="./images/leadzugc.png" alt="LeadZUGC Logo">
+        <p>&copy; 2025 LeadZUGC. Alle rettigheter forbeholdt.</p>
       </div>
       <div class="footer-links">
         <a href="index.html">Hjem</a>
@@ -62,6 +47,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>
